@@ -1,11 +1,19 @@
 package string.problems;
 
 public class Palindrome {
-    public static void main(String[] args) {
-        /*
-          If a String is reversed and it remains unchanged, that is called Palindrome. For example, MOM,DAD,MADAM are
-          Palindrome. So write java code to check if a given String is Palindrome or not.
-         */
+    private static String word = "Her";
+    private static String toLowerCase = word.toLowerCase();
+    private static  String str = "";
 
+    public static void main(String[] args) {
+
+        for (int i = toLowerCase.length()-1; i >= 0; i--) {
+            str += toLowerCase.charAt(i);
+        } if (toLowerCase.equals(str)){
+            System.out.println("'" + word + "'" + "  is a palindrome");
+        } else {
+            System.out.println("'" + word + "'" + " not a palindrome");
+        }
     }
 }
+
