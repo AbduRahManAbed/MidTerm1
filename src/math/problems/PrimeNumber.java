@@ -2,17 +2,29 @@ package math.problems;
 
 public class PrimeNumber {
 
+	private static int numbers  = 1000000;
+	private static int a, b;
+	private static int PrimeNumbers = 0;
+	private static boolean Prime;
+
 	public static void main(String[] args) {
-		/*
-		 * Find list of Prime numbers from number 2 to 1 million.
-		 * Try the best solution as possible.Which will take less CPU life cycle.
-		 * Out put number of Prime numbers on the given range.
-		 *
-		 *
-		 * Use any databases[MongoDB, Oracle, MySql] to store data and retrieve data.
-		 *
-		 */
 
+		for(a = 2; a<numbers; a++ ) {
+			Prime = true;
+
+			for( b = 2; b<a; b++) {
+				if(a%b ==0) {
+					Prime = false;
+					break;
+				}
+			} if(Prime) {
+				System.out.println(a);
+				PrimeNumbers++;
+			}
+		}
+		System.out.println("Prime numbers "+ PrimeNumbers);
 	}
-
 }
+
+
+
