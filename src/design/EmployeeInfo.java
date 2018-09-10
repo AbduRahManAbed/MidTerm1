@@ -21,7 +21,7 @@ public class EmployeeInfo {
 	 * declare few static and final fields and some non-static fields
 	 */
 	static String companyName;
-	
+
 	/*
 	 * You must implement the logic for below 2 methods and 
 	 * following 2 methods are prototype as well for other methods need to be design,
@@ -33,10 +33,10 @@ public class EmployeeInfo {
 	 * Must implement below constructor.
 	 */
 	public EmployeeInfo(int employeeId){
-		
+
 	}
     public EmployeeInfo(String name, int employeeId){
-		
+
 	}
 	
 	/*
@@ -51,7 +51,7 @@ public class EmployeeInfo {
 		int total=0;
 		return total;
 	}
-	
+
 	/*
 	 * This methods should calculate Employee Pension based on salary and numbers of years with the company.
 	 * Then it will return the total pension. So you need to implement the logic.
