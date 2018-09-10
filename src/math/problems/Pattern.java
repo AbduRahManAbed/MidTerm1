@@ -1,15 +1,28 @@
 package math.problems;
 
+import java.util.ArrayList;
+
 public class Pattern {
+	static int cntA = 1;
+	static int cntB = 10;
+	static int cntC = 0;
+	static int currentNum = 100;
 
 	public static void main(String[] args) {
-		/* Read this numbers, find the pattern then implement the logic from this pattern.which will give you this output.
-		 * 100,99,98,97,96,95,94,93,92,91,90,88,86,84,82,80,78,76,74,72,70,67,64,61,58,55,52,49,46,43,40,36,32............
-		 *
-		 *
-		 */
-		
+		ArrayList<Integer> numbers = new ArrayList();
 
-
+		while(currentNum > 0){
+			if(cntC < cntB){
+				numbers.add(currentNum);
+				currentNum -= cntA ;
+				cntC+= cntA;
+			} else {
+				cntA++;
+				cntC = 0;
+				cntB = cntB + 10;
+			}
+		}
+		System.out.println(numbers.toString());
 	}
 }
+
